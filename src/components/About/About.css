@@ -1,0 +1,265 @@
+.About{
+    padding: 64px 80px;
+    min-height: calc(100vh - 64px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    background-color: antiquewhite;
+}
+
+.AboutMain{
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.aboutImg{
+    width: 30%;
+    margin: 24px 0;
+    box-shadow: 0px 10px 20px 0px #0000001A;
+}
+
+.aboutImg>img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    /* border-top-left-radius: 20px; */
+    /* border-bottom-left-radius: 20px; */
+}
+
+.aboutBox1, .aboutBox2{
+    width: 30%;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    text-align: left;
+    box-shadow: 0px 10px 20px 0px #0000001A;
+
+}
+.aboutBox1{
+    background-color: black;
+    /* border-radius: 20px; */
+    color: white;
+}
+
+.aboutBox2{
+    margin: 24px 0;
+    background-color: white;
+    /* border-top-right-radius: 20px; */
+    /* border-bottom-right-radius: 20px; */
+}
+
+.aboutHead{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.aboutText{
+    color: rgb(194, 194, 194);
+}
+
+.aboutBtn{
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+    /* font-weight: 700; */
+    text-align: left;
+}
+
+
+.AboutNumbers{
+    display: flex;
+    gap: 64px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 64px 0;
+    color: black;
+}
+
+.aboutCards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutCardsHead{
+    font-size: 60px;
+  }
+  .aboutCardsText{
+    margin:0 20px 20px;
+  }
+
+@property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
+  
+  .aboutCardsHead.one {
+    animation: counter 2s linear forwards;
+    counter-reset: num var(--num);
+  }
+  .aboutCardsHead.one::after {
+    content: counter(num) '+';
+  }
+  
+  @keyframes counter {
+    0%{
+        --num: 0;
+    }
+    50%{
+        --num: 13;
+    }
+    100%{
+        --num: 2;
+    }
+  }
+  .aboutCardsHead.two {
+    animation: counter2 2s linear forwards;
+    counter-reset: num var(--num);
+  }
+  .aboutCardsHead.two::after {
+    content: counter(num) '+';
+  }
+  
+  @keyframes counter2 {
+    0% {
+      --num: 0;
+    }
+    80% {
+      --num: 22;
+    }
+    100%{
+      --num: 20;
+    }
+  }
+  .aboutCardsHead.three {
+    animation: counter3 2s linear forwards;
+    counter-reset: num var(--num);
+  }
+  .aboutCardsHead.three::after {
+    content: counter(num) '+';
+  }
+  
+  @keyframes counter3 {
+    0% {
+      --num: 0;
+    }
+    100%{
+      --num: 25;
+    }
+  }
+
+  .aboutCardsHead.four {
+    animation: counter4 2s linear forwards;
+    counter-reset: num var(--num);
+  }
+  .aboutCardsHead.four::after {
+    content: counter(num) '+';
+  }
+  
+  @keyframes counter4 {
+    0% {
+      --num: 0;
+    }
+    60% {
+      --num: 15;
+    }
+    100%{
+      --num: 5;
+    }
+  }
+
+
+
+@media only screen and (max-width: 850px){
+  .AboutMain{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .aboutImg{
+    width: 90%;
+    height: 200px;
+    margin: 0px 0;
+  }
+
+  .aboutBox1, .aboutBox2{
+    padding: 40px 24px;
+    font-size: 14px;
+    width: calc(50% - 48px);
+  }
+
+  .aboutBox1{
+    margin-top: -32px;
+  }
+
+  .aboutBox2{
+    margin: 0 0 24px;
+  }
+
+
+  .AboutNumbers{
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .aboutCards{
+    width: 40%;
+    align-items: center;
+  }
+}
+
+
+@media only screen and (orientation: portrait) {
+  .About{
+    padding: 64px 24px;
+  }
+
+  .AboutMain{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aboutImg{
+    width: 90%;
+    align-self: flex-end;
+  }
+
+  .aboutBox1, .aboutBox2{
+    padding: 40px 32px;
+    width: calc(95% - 64px);
+  }
+
+  .aboutBox1{
+    margin-top: -32px;
+    align-self: flex-start;
+  }
+
+  .aboutBox2{
+    margin: -16px 0 24px;
+    z-index: 2;
+    align-self: flex-end;
+  }
+
+  .aboutHead{
+    font-size: 28px;
+  }
+
+
+  .aboutBtn{
+    
+  }
+
+  .AboutNumbers{
+    align-items: flex-start;
+    padding: 32px 0;
+  }
+
+  .aboutCardsHead{
+    font-size: 56px;
+  }
+}

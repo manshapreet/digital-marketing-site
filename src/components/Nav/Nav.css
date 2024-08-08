@@ -1,0 +1,38 @@
+.Nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 96px;
+    padding: 0 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.navItems{
+    display: flex;
+    gap: 32px;
+    font-weight: 500;
+}
+
+.logo{
+    height: 36px;
+}
+
+@media only screen and (orientation: portrait){
+    .Nav{
+        padding: 0 24px;
+    }
+    
+    .navItems{
+        display: flex;
+        gap: 16px;
+        font-size: 12px;
+    }
+
+    .logo{
+        height: 32px;
+    }
+}

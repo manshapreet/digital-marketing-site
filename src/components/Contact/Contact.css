@@ -1,0 +1,111 @@
+.Contact{
+    padding: 64px 96px;
+    min-height: calc(100vh - 128px);
+    display: flex;
+    /* gap: 32px; */
+    background-color:antiquewhite;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.ContactMainBox{
+    width: 80%;
+    box-shadow: 0px 10px 20px 0px #0000001A;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.SendMsgBox{
+    width: calc(65% - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* justify-content: center; */
+    gap: 16px;
+    padding: 64px 40px;
+    /* background-color: aquamarine; */
+}
+
+.sendMsgHead{
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    text-align: left;
+}
+
+.contactBtn{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+
+.ContactSubBox{
+    position: absolute;
+    top: 108px;
+    /* bottom: 96px; */
+    left: 13%;
+    right: 55%;
+    background-color: var(--primary);
+    background-color: white;
+    /* color: white; */
+    box-shadow: 0px 8px 30px 0px #0000001A;
+    padding: 40px 32px 64px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sendMsgContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 40px;
+}
+
+.contactInfoIcons{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.icon{
+    font-size: 20px !important;
+}
+
+
+@media only screen and (orientation: portrait) {
+    .Contact{
+        padding: 64px 24px;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    
+    .ContactMainBox{
+        width: 90%;
+        align-self: flex-start;
+        justify-content: flex-start;
+    }
+    
+    .SendMsgBox{
+        width: calc(100% - 64px);
+        align-items: flex-start;
+        padding: 48px 32px 64px;
+    }
+    
+    .ContactSubBox{
+        align-self: flex-end;
+        position: static;
+        padding: 32px 48px 64px;
+        margin-top: -24px;
+        z-index: 1;
+    }
+
+    .icon{
+        font-size: 24px !important;
+    }
+}
